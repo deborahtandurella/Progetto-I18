@@ -19,4 +19,15 @@ public class Operator {
     public String getAddress() {
         return address;
     }
+
+    //metodo per aggiungere una risposta scritta
+    public boolean addAnswer(String inputAnswer){
+        if (inputAnswer != null) {
+            Answer newAnswer = new Answer(this.commercialName, inputAnswer);
+            return true;
+        }
+        else return false;
+    }
+
+
 }

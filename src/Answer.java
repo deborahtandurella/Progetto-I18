@@ -3,8 +3,8 @@ public class Answer {
     private String operator;
     private String bodyAnswer;
 
-    public Answer(Answer[] treeAnswer, String operator, String bodyAnswer) {
-        this.treeAnswer = treeAnswer;
+    public Answer(/*Answer[] treeAnswer,*/ String operator, String bodyAnswer) {
+        //this.treeAnswer = treeAnswer;
         this.operator = operator;
         this.bodyAnswer = bodyAnswer;
     }
