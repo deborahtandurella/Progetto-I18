@@ -1,7 +1,7 @@
-public class Telefono {
+public class Phone {
     private String id;
 
-    public Telefono(String id) {
+    public Phone(String id) {
         this.id = id;
     }
 
