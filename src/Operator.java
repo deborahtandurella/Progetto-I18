@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.StringTokenizer;
+
 public class Operator {
     //a questi attributi possiamo inserirne altri successivamente, in base alle necessità
     private String pIva;
@@ -20,7 +25,7 @@ public class Operator {
         return address;
     }
 
-    //metodo per aggiungere una risposta scritta
+    //metodo per aggiungere un nuovo oggetto Answer
     public boolean addAnswer(String inputAnswer){
         if (inputAnswer != null) {
             Answer newAnswer = new Answer(this.commercialName, inputAnswer);
@@ -28,6 +33,22 @@ public class Operator {
         }
         else return false;
     }
+
+    //metodo per aggiungere una nuova list da stringa
+    public boolean addList (String answers){
+        if(answers != null){
+            ArrayList<Answer> a = new ArrayList();
+            StringTokenizer singleAnswer = new StringTokenizer(answers, "\n");
+            while(singleAnswer.hasMoreTokens()){
+                Answer x = new Answer(this.commercialName, singleAnswer.nextToken());
+                a.add(x);
+            }
+            Lista newLista = new Lista(a);
+            return true;
+        }
+        return false;
+    }
+
 
 
 }
