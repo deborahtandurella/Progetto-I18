@@ -13,11 +13,6 @@ public class ReadFile {
 
         if (in.ready()){
             s = in.readLine();
-
-            //String [] lineS = lineIn.split("\t");
-
-            //DataBase data = new DataBase (lineS[0]);
-
         }
         in.close();
         return s;
