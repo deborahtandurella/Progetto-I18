@@ -5,9 +5,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class Phone extends JFrame {
+    private JPanel mainPanel;
+    private JTextArea textArea;
+
     private JButton callButton;
     private JButton closeButton;
 
@@ -24,8 +29,7 @@ public class Phone extends JFrame {
     private JButton asterisk;
     private JButton hashtag;
 
-    private JPanel mainPanel;
-    private JTextArea textArea;
+
     private JButton Delete;
 
     public Phone(){
@@ -103,17 +107,22 @@ public class Phone extends JFrame {
         callButton.addActionListener(new ActionListener()  {
             @Override
             public void actionPerformed(ActionEvent e)  {
+
+                BufferedReader br = null;
+                FileReader fl = null;
+
                 if ("1234".equals(textArea.getText())) {
                     textArea.replaceRange("", 0, textArea.getText().length());
                     textArea.append("Calling...\n");
+
                     try{
+
                         textArea.append(ReadFile.lettura());
+
                     }
                     catch(IOException ie){
                         System.out.println("ERRORE LETTURA");
                     }
-
-
                 }
                 else{
                     textArea.replaceRange("", 0, textArea.getText().length());
@@ -126,10 +135,7 @@ public class Phone extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 textArea.replaceRange("", 0, textArea.getText().length());
-
             }
         });
-
     }
-
 }
