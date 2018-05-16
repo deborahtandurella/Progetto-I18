@@ -3,4 +3,4 @@ Premi "1" per guardare la lista dei nostri servizi.
 Premi "2" se sei un cliente.
 Premi "3" se vuoi fare parte della nostra associazione.
 Premi "*" per tornare al menu precedente.
-Premi "#" per chidure la chiamata.
+Premi "#" per chiudere la chiamata.

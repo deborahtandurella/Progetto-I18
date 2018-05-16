@@ -8,7 +8,7 @@ public class ReadFile {
     public static String lettura() throws IOException{
         String s = "";
 
-        FileReader file = new FileReader("C:\\Users\\edjbr\\Documents\\GitHub\\Progetto-I18\\CallCenter JAVA\\src\\com\\company\\DataBase.txt");
+        FileReader file = new FileReader("C:\\Users\\UTENTE\\Documents\\Progetto-I18Edu5\\CallCenter JAVA\\src\\com\\company\\DataBase.txt");
         BufferedReader in = new BufferedReader(file);
 
         String line;
@@ -18,10 +18,6 @@ public class ReadFile {
             s += line + "\n";
         }
 
-        /*
-        if (in.ready()){
-            s = in.readLine();
-        }*/
 
         in.close();
         return s;

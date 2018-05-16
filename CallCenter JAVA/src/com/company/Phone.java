@@ -31,8 +31,15 @@ public class Phone extends JFrame {
 
 
     private JButton Delete;
+    private JScrollBar scrollBar1;
 
-    public Phone(){
+    public Phone() {
+
+        super();
+       // setBounds(200, 100, 800, 600);
+
+
+
         this.add(mainPanel);
         num1.addActionListener(new ActionListener() {
             @Override
@@ -137,5 +144,12 @@ public class Phone extends JFrame {
                 textArea.replaceRange("", 0, textArea.getText().length());
             }
         });
+
+
+
+    }
+
+    public JPanel getMainPanel() {
+        return mainPanel;
     }
 }
