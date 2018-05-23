@@ -16,11 +16,12 @@ public class Client {
         try{
             scn = new Scanner(System.in);
             //InetAddress ip = InetAddress.getByName("localhost");
-            Socket socket = new Socket("172.16.2.190",55556);
+            Socket socket = new Socket("172.16.3.21",55556);
 
             dis = new DataInputStream(socket.getInputStream());
             dos = new DataOutputStream(socket.getOutputStream());
 
+            dos.writeUTF("0");
             while(true){
                 System.out.println(dis.readUTF());
                 String tosend = scn.nextLine();
@@ -32,8 +33,8 @@ public class Client {
                     break;
                 }
 
-                String received = dis.readUTF();
-                System.out.println(received);
+                //String received = dis.readUTF();
+                //System.out.println(received);
             }
         }
         catch (IOException e){

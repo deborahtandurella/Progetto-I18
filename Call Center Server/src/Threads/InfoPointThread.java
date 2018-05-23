@@ -41,7 +41,14 @@ public class InfoPointThread extends Thread {
                         }
                         dos.writeUTF(errore + "\n" + infoPoint.get(counter));
                     }
-                    received = dis.readUTF();
+                    while(true){
+                        received = dis.readUTF();
+                        if (received.length() == 1){
+                            break;
+                        }
+                            dos.writeUTF("Inserire un numero alla volta");
+                    }
+
                     System.out.println("dato ricevuto "+received);
 
                     if (received.equals("9")) {
@@ -50,7 +57,7 @@ public class InfoPointThread extends Thread {
                         break;
                     }
 
-                    dos.writeUTF(counter);
+                    //dos.writeUTF(counter);
 
                     if (received.equals("8")){
                         counter = counter.substring(0,counter.length()-1);

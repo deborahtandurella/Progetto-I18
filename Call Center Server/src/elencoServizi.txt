@@ -1,0 +1,6 @@
+InfoPoint.txt
+unipv.txt
+uniroma.txt
+polimi.txt
+ciaone.txt
+asdads.txt
