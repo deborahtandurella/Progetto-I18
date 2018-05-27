@@ -1,19 +1,23 @@
 package Threads;
 
+import Storico.Storico;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.HashMap;
 
 public class InfoPointThread extends Thread {
+    private Storico log;
     private HashMap<String,String> infoPoint;
     private Socket client;
     private String received;
     private String tosend;
     private static final String errore = "Numero inserito non valido, riprovare";
 
-    public InfoPointThread(Socket client, HashMap infoPoint){
+    public InfoPointThread(Storico log, Socket client, HashMap infoPoint){
         this.client = client;
         this.infoPoint = infoPoint;
+        this.log = log;
         System.out.println("thread");
         this.start();
     }
@@ -41,8 +45,10 @@ public class InfoPointThread extends Thread {
                         }
                         dos.writeUTF(errore + "\n" + infoPoint.get(counter));
                     }
+                    log.aggiornastorico("Il server manda: " + infoPoint.get(counter), client);
                     while(true){
                         received = dis.readUTF();
+                        log.aggiornastorico("Il server ha ricevuto: " + received, client);
                         if (received.length() == 1){
                             break;
                         }
