@@ -1,6 +1,7 @@
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.net.SocketException;
 import java.util.Scanner;
 
 public class Client {
@@ -16,14 +17,19 @@ public class Client {
         try{
             scn = new Scanner(System.in);
             //InetAddress ip = InetAddress.getByName("localhost");
-            Socket socket = new Socket("172.16.3.21",55556);
+            Socket socket = new Socket("172.16.3.109",55556);
 
             dis = new DataInputStream(socket.getInputStream());
             dos = new DataOutputStream(socket.getOutputStream());
 
-            dos.writeUTF("0");
+            dos.writeUTF("6");
             while(true){
-                System.out.println(dis.readUTF());
+                String received = dis.readUTF();
+                System.out.println(received);
+                if(received.equals("Prenotazione effettuata con successo")||received.equals("BIGLIETTI ESAURITI")){
+                    socket.close();
+                    break;
+                }
                 String tosend = scn.nextLine();
                 dos.writeUTF(tosend);
 
@@ -36,6 +42,9 @@ public class Client {
                 //String received = dis.readUTF();
                 //System.out.println(received);
             }
+        }
+        catch (EOFException | SocketException e){
+            System.out.println("CHIAMATA INTERROTTA");
         }
         catch (IOException e){
             e.printStackTrace();

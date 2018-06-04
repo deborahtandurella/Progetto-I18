@@ -35,9 +35,12 @@ public class InfoPointThread extends Thread {
                 while(true) {
                     System.out.println("contatore "+counter);
                     try{
+                        System.out.println("OK");
                         dos.writeUTF(infoPoint.get(counter));
+                        System.out.println("OK");
                     }
                     catch (NullPointerException e){
+                        System.out.println("OK");
                         if(received.equals("8") && counter.equals("")){
                             counter = "0";
                         }else if(!received.equals("8")){
@@ -46,6 +49,9 @@ public class InfoPointThread extends Thread {
                         dos.writeUTF(errore + "\n" + infoPoint.get(counter));
                     }
                     log.aggiornastorico("Il server manda: " + infoPoint.get(counter), client);
+
+                    //POTREBBE DIVENTARE UN METODO
+                    //-----------------------------------------------
                     while(true){
                         received = dis.readUTF();
                         log.aggiornastorico("Il server ha ricevuto: " + received, client);
@@ -54,6 +60,7 @@ public class InfoPointThread extends Thread {
                         }
                             dos.writeUTF("Inserire un numero alla volta");
                     }
+                    //-----------------------------------------------
 
                     System.out.println("dato ricevuto "+received);
 
