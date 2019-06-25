@@ -1,0 +1,67 @@
+Tue 2019.06.25 at 09:01:18 PM CEST||#  - SERVER ONLINE
+Tue 2019.06.25 at 09:02:06 PM CEST||# 123456 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:03:16 PM CEST||#  - SERVER ONLINE
+Tue 2019.06.25 at 09:03:27 PM CEST||# 123456 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:03:38 PM CEST||# 123456 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:03:49 PM CEST||# 123456 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:04:07 PM CEST||# 123456 - received findOperator request 
+Tue 2019.06.25 at 09:04:07 PM CEST||# 123456 - Operator OldUser1995 at number 5555 added to database.
+Tue 2019.06.25 at 09:04:07 PM CEST||# 123456 - received addAndRetrieveOperator request
+Tue 2019.06.25 at 09:04:07 PM CEST||# 123456 - Status for operator OldUser1995changed to true
+Tue 2019.06.25 at 09:04:07 PM CEST||# 123456 - LOGGED IN
+Tue 2019.06.25 at 09:04:07 PM CEST||# 123456 - received request to login
+Tue 2019.06.25 at 09:06:04 PM CEST||# 123456 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:06:05 PM CEST||# 123456 - Status for operator OldUser1995changed to false
+Tue 2019.06.25 at 09:06:05 PM CEST||# 123456 - LOGGED OUT
+Tue 2019.06.25 at 09:06:05 PM CEST||# 123456 - received request to logout
+Tue 2019.06.25 at 09:06:05 PM CEST||# 123456 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:06:15 PM CEST||# 123456 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:08:19 PM CEST||# 1245 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:08:21 PM CEST||# 1245 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:08:22 PM CEST||# 1245 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:08:41 PM CEST||# 1245 - received findOperator request 
+Tue 2019.06.25 at 09:08:41 PM CEST||# 1245 - Operator ESgherre95 at number 5555 added to database.
+Tue 2019.06.25 at 09:08:41 PM CEST||# 1245 - received addAndRetrieveOperator request
+Tue 2019.06.25 at 09:08:41 PM CEST||# 1245 - Status for operator ESgherre95changed to true
+Tue 2019.06.25 at 09:08:41 PM CEST||# 1245 - LOGGED IN
+Tue 2019.06.25 at 09:08:41 PM CEST||# 1245 - received request to login
+Tue 2019.06.25 at 09:08:53 PM CEST||# 1245 - Status for operator ESgherre95changed to false
+Tue 2019.06.25 at 09:08:53 PM CEST||# 1245 - LOGGED OUT
+Tue 2019.06.25 at 09:08:53 PM CEST||# 1245 - received request to logout
+Tue 2019.06.25 at 09:08:53 PM CEST||# 1245 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:08:55 PM CEST||# 1245 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:09:28 PM CEST||#  - SERVER ONLINE
+Tue 2019.06.25 at 09:09:38 PM CEST||# 122158 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:09:40 PM CEST||# 122158 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:09:41 PM CEST||# 122158 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:10:22 PM CEST||# 122158 - received findOperator request 
+Tue 2019.06.25 at 09:10:22 PM CEST||# 122158 - Status for operator ESgherre95changed to true
+Tue 2019.06.25 at 09:10:22 PM CEST||# 122158 - LOGGED IN
+Tue 2019.06.25 at 09:10:22 PM CEST||# 122158 - received request to login
+Tue 2019.06.25 at 09:10:39 PM CEST||# 122158 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:11:27 PM CEST||# 254343 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:11:30 PM CEST||# 254343 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:11:31 PM CEST||# 254343 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:11:36 PM CEST||# 254343 - received findOperator request 
+Tue 2019.06.25 at 09:12:14 PM CEST||# 254343 - received findOperator request 
+Tue 2019.06.25 at 09:12:14 PM CEST||# 254343 - Status for operator ASDs195965changed to true
+Tue 2019.06.25 at 09:12:14 PM CEST||# 254343 - LOGGED IN
+Tue 2019.06.25 at 09:12:14 PM CEST||# 254343 - received request to login
+Tue 2019.06.25 at 09:12:37 PM CEST||# 254343 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:13:49 PM CEST||# 254343 - Status for operator ASDs195965changed to false
+Tue 2019.06.25 at 09:13:49 PM CEST||# 254343 - LOGGED OUT
+Tue 2019.06.25 at 09:13:49 PM CEST||# 254343 - received request to logout
+Tue 2019.06.25 at 09:13:54 PM CEST||# 254343 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:14:43 PM CEST||# 254343 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:14:58 PM CEST||# 121541 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:15:00 PM CEST||# 121541 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:15:03 PM CEST||# 121541 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:15:17 PM CEST||# 121541 - received findOperator request 
+Tue 2019.06.25 at 09:15:17 PM CEST||# 121541 - Status for operator ASd52f156changed to true
+Tue 2019.06.25 at 09:15:17 PM CEST||# 121541 - LOGGED IN
+Tue 2019.06.25 at 09:15:17 PM CEST||# 121541 - received request to login
+Tue 2019.06.25 at 09:15:33 PM CEST||# 121541 - Status for operator ASd52f156changed to false
+Tue 2019.06.25 at 09:15:33 PM CEST||# 121541 - LOGGED OUT
+Tue 2019.06.25 at 09:15:33 PM CEST||# 121541 - received request to logout
+Tue 2019.06.25 at 09:15:33 PM CEST||# 121541 - received retrieveJustTheRightOption request
+Tue 2019.06.25 at 09:15:38 PM CEST||# 121541 - received retrieveJustTheRightOption request
