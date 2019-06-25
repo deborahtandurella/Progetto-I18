@@ -45,8 +45,6 @@ public class UpdatePasswordOperatorGUI extends JFrame {
     private final int BUTTONY1=115;
     private final int BUTTONX2=75;
     private final int BUTTONY2=20;
-    // private JTextField jT1;
-    // private JTextField jT2;
     private String number;
     private String username;
     private String numCalling;

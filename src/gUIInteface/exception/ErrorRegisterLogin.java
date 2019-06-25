@@ -13,9 +13,9 @@ public class ErrorRegisterLogin extends JFrame implements ActionListener {
     private final String TITLE = "Error";
     private final String BTNTEXT = "OK";
     private final int BTNBOUNDSX1 = 150;
-    private final int BTNBOUNDSY1 = 150;
-    private final int BTNBOUNDSX2 = 150;
-    private final int BTNBOUNDSY2 = 150;
+    private final int BTNBOUNDSY1 = 10;
+    private final int BTNBOUNDSX2 = 60;
+    private final int BTNBOUNDSY2 = 30;
 
     private ExceptionEnum exceptionEnum;
     private String forTheAllign="       ";
@@ -25,6 +25,9 @@ public class ErrorRegisterLogin extends JFrame implements ActionListener {
         initComponents();
     }
 
+    /**
+     * This method contains all the window settings
+     */
     private void initComponents(){
         this.setLocation(WINDOWX, WINDOWY);
         this.setVisible(true);

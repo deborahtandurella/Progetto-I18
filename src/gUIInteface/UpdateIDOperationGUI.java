@@ -43,8 +43,6 @@ public class UpdateIDOperationGUI extends JFrame {
     private final int BUTTONY1=135;
     private final int BUTTONX2=75;
     private final int BUTTONY2=20;
-    //private JTextField oldIDField;
-    //private JTextField newIDField;
     private String number;
     private String numberCalling;
 
@@ -88,7 +86,7 @@ public class UpdateIDOperationGUI extends JFrame {
                             ObjectInputStream is = new ObjectInputStream(socket.getInputStream());
                             os.writeObject(new MessageServer(MessageType.MODIFYIDOPERATION, numberCalling, oldIDField.getText().trim(), number, newIDField.getText().trim()));
                             Operation operationUpdated = (Operation) is.readObject();
-                            if(operationUpdated != null && operationUpdated.getId().equals(oldIDField.getText().trim())) {
+                            if(operationUpdated != null && operationUpdated.getId().equals(newIDField.getText().trim())) {
                                 end();
                             }
                         } catch (IOException | ClassNotFoundException ex) {

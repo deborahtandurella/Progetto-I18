@@ -74,6 +74,13 @@ public class MultiThreadServer implements Runnable {
         }
     }
 
+    /**
+     * This method is used to return the message to the Client
+     * @param tag
+     * @param messageServer
+     * @return
+     * @throws IllegalAccessException
+     */
     private Object returnMessage(MessageType tag, MessageServer messageServer) throws IllegalAccessException{
         Object result;
         try {

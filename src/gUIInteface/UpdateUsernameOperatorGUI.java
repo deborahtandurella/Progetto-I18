@@ -36,7 +36,6 @@ public class UpdateUsernameOperatorGUI extends JFrame {
     private final int BUTTONY2=20;
     private final String TITLE="Update username operator window";
     private final String LABEL="Insert your new Username: ";
-    //private JTextField jT1;
     private String number;
     private String numCalling;
     private MenuOperationGUI menuOperationGUI;
@@ -80,7 +79,6 @@ public class UpdateUsernameOperatorGUI extends JFrame {
                                 ObjectInputStream is = new ObjectInputStream(socket.getInputStream());
                                 os.writeObject(new MessageServer(MessageType.MODIFYUSERNAME, numCalling, number, username, userField.getText().trim()));
                                 updatedOperator = (Operator) is.readObject();
-                                // if (updatedOperator.getUsername().equals(userField.getText().trim())) {
                                 if (updatedOperator.getUsername().equals(username)) {
                                     OperatorAlreadyUsed operatorAlreadyUsed = new OperatorAlreadyUsed();
                                     operatorAlreadyUsed.setVisible(true);

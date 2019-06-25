@@ -133,16 +133,8 @@ public class RegisterLogin extends JFrame {
                         }
                     }
                     else {
-                        //if(operatorIn.getNumber().equals(numberCalled) && operatorIn.getUsername().equals(userText.getText().trim())) {
                         OperatorAlreadyUsed oAU = new OperatorAlreadyUsed();
                         oAU.setVisible(true);
-                        //  }
-                        //
-                        // if/else have same body
-                        //else {
-                        // OperatorAlreadyUsed oAU = new OperatorAlreadyUsed();
-                        // oAU.setVisible(true);
-                        // }
                     }
                 }
             }

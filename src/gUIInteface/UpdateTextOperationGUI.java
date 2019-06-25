@@ -42,8 +42,6 @@ public class UpdateTextOperationGUI extends JFrame {
     private final String TITLE="UpdateText operation window";
     private final String LABELID="Insert the id of the operation to modify: ";
     private final String LABELTEXT="Insert the new text for the operation: ";
-    //private JTextField jT1;
-    //private JTextField jT2;
     private String number;
     private String numCalling;
 
