@@ -8,6 +8,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * This class is used to add a new operation in the database
+ */
 public class DBOperationInserter {
     public DBOperationInserter(){
 

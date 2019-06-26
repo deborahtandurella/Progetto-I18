@@ -7,6 +7,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * This class is used to modify username, password or status of a defined operator
+ */
 public class DBOperatorUpdater {
     public DBOperatorUpdater(){
 

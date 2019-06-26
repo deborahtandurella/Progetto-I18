@@ -15,6 +15,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+/**
+ * This class is used to receive the inputs for change the id of an operation
+ */
 public class UpdateIDOperationGUI extends JFrame {
     private final String TITLE="UpdateID operation window";
     private final String OLDIDLABEL="Insert the old id of the operation: ";

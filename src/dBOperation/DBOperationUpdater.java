@@ -10,6 +10,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * This class is used to change an operation on the database
+ */
 public class DBOperationUpdater {
     private DBOperationReader operationReader;
     public DBOperationUpdater() {
@@ -50,7 +53,7 @@ public class DBOperationUpdater {
                     ps.execute();
                     connection.commit();
                     System.err.println("[DBOperationUpdater] - id " + oldId + " changed in " + newId );
-                    dataWriter.updateHistory("Id apdated for the operation " + oldId + " at number " + number + ", new id: " + newId);
+                    dataWriter.updateHistory("Id updated for the operation " + oldId + " at number " + number + ", new id: " + newId);
                 } catch (SQLException e) {
                     System.err.println("[DBOperationUpdater] - Exception " + e + " encountered in method changeOperationID.");
                 }

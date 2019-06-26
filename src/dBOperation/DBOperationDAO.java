@@ -5,6 +5,9 @@ import model.Operation;
 import java.sql.Connection;
 import java.util.ArrayList;
 
+/**
+ * This class contains all the methods available for the database of the operations
+ */
 public class DBOperationDAO implements IDBOperationProxy {
     private static DBOperationDAO instance;
     private Connection connection;

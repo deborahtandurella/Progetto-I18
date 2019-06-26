@@ -17,6 +17,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+/**
+ * This class is used to receive the inputs to change the password of an operator
+ */
 public class UpdatePasswordOperatorGUI extends JFrame {
     private final String TITLE="UpdatePassword operator window";
     private final String PSW1LABEL="Insert your new password: ";

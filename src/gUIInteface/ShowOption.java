@@ -3,6 +3,9 @@ package gUIInteface;
 import javax.swing.*;
 import java.util.ArrayList;
 
+/**
+ * This class is used to show all the available option displayed when the user calls a number
+ */
 public class ShowOption extends JFrame {
     private final int WINDOWX1=1000;
     private final int WINDOWY1=400;

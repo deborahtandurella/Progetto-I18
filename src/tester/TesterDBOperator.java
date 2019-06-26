@@ -14,6 +14,9 @@ import org.junit.runner.notification.Failure;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
 
+/**
+ * This class contains an inner test for the database Operator
+ */
 public class TesterDBOperator {
     private String numCalling="222333";
     @Before

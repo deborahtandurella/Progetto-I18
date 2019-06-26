@@ -4,6 +4,9 @@ import model.Operation;
 
 import java.util.ArrayList;
 
+/**
+ * This interface contains all the available methods for the database operation
+ */
 public interface IDBOperationProxy {
     void addOperation(String numCalling, Operation operation);
     void removeOperation(String numCalling,String id,String number);

@@ -16,6 +16,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+/**
+ * This class is used to receive the inputs for login/register a new operator
+ */
 public class RegisterLogin extends JFrame {
     private static final String LOGINPRESSED="The user pressed the login button";
     private static final String REGISTERPRESSED="The user pressed the register button";

@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * This class contains the exception for the operator' s input
+ */
 public class ErrorRegisterLogin extends JFrame implements ActionListener {
     private final int WINDOWX = 600;
     private final int WINDOWY = 300;

@@ -9,6 +9,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * This class is called for delete a defined operation
+ */
 public class DBOperationDeleter {
     public DBOperationDeleter(){
 

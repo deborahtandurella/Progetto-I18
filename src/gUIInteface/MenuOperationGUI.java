@@ -15,6 +15,9 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+/**
+ * This class contain all the buttons of the operations available on the database
+ */
 public class MenuOperationGUI extends JFrame {
     private final String TITLE = "Menu operations window";
     private final int WINDOWX1 = 600;

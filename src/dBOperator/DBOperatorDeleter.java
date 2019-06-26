@@ -6,6 +6,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * This class is used to delete a defined operator
+ */
 public class DBOperatorDeleter {
     public DBOperatorDeleter(){
 

@@ -2,6 +2,9 @@ package model;
 
 import java.io.Serializable;
 
+/**
+ * This class contains all the attributes and methods available for the object Operator
+ */
 public class Operator implements Serializable {
     private static final long serialVersionUID = 44154261655452454L;
 

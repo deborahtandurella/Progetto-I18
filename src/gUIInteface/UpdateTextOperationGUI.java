@@ -14,6 +14,9 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+/**
+ * This class is used to receive the inputs to change the textof an operation
+ */
 public class UpdateTextOperationGUI extends JFrame {
     private final int WINDOWX1=600;
     private final int WINDOWY1=200;

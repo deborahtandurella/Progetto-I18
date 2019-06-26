@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * This class s used to set the window settings of a great part of the exceptions handled in the program
+ */
 public abstract class MasterClassGUIException extends JFrame {
     /**
      * macro for the allignment of the components

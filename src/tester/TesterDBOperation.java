@@ -17,6 +17,9 @@ import static org.junit.Assert.assertThat;
 
 import java.util.List;
 
+/**
+ * This class contains an inner test for the database operation
+ */
 public class TesterDBOperation {
     private String numCalling="556555";
     @Before
@@ -25,8 +28,6 @@ public class TesterDBOperation {
         instance.addOperation(numCalling,new Operation("12","5569","Nice test"));
         instance.updateID(numCalling,"12","5569","27");
         instance.updateText(numCalling,new Operation("27","5569","Well done"));
-        //Creo oggetti operation
-        //
     }
 
     @After

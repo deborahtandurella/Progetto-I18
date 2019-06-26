@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * This class contains all the methods to interact with the database of the operators
+ */
 public class DBConnectionManagerOperator {
     private final String DATABASE="operatordb";
     private final String USERNAME="root";

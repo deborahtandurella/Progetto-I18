@@ -12,6 +12,9 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+/**
+ * This class is used to delete an operator logged in
+ */
 public class DeleteOperatorGUI extends JFrame {
     private final String TITLE = "Delete operator window";
     private final String MESSAGE = "Are you sure to delete this account?";

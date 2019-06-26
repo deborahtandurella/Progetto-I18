@@ -7,6 +7,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * This class is used to retrieve a defined operator
+ */
 public class DBOperatorReader {
     public DBOperatorReader(){
 

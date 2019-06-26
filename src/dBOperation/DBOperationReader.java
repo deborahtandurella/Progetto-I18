@@ -9,6 +9,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * This class is used to retrieve the operations from the database
+ */
 public class DBOperationReader {
     private String toCompare="";
     public DBOperationReader(){

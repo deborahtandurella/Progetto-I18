@@ -1,5 +1,8 @@
 package gUIInteface.exception;
 
+/**
+ * This enum contains the names of all the exceptions handled in ErrorRegisterLogin class
+ */
 public enum ExceptionEnum {
     SHORT("Minimum length of 8 is required"),
     NUMBER("The password must contain a number"),

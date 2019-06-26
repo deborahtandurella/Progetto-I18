@@ -14,6 +14,9 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+/**
+ * This class is used to receive the inputs for add a new operation
+ */
 public class InsertOperationGUI extends JFrame {
     private final String TITLE = "Add operation window";
     private final String MESSAGEID = "Insert the id of the operation: ";

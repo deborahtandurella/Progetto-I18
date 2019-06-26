@@ -8,6 +8,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * This class is used to insert the phone number of the user
+ */
 public class NumberPhoneGUI extends JFrame {
     private final int WINDOWX1=650;
     private final int WINDOWY1=300;

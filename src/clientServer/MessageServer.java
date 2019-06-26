@@ -5,6 +5,9 @@ import model.Operator;
 
 import java.io.Serializable;
 
+/**
+ * This class is used to contain all the types of message and a list of parameters to send to the Server
+ */
 public class MessageServer implements Serializable {
     private static final long serialVersionUID = 44154261654512454L;
     private String numCalling;

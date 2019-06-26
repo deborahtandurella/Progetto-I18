@@ -17,6 +17,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+/**
+ * This class is used to receive the inputs to change the username of an operator
+ */
 public class UpdateUsernameOperatorGUI extends JFrame {
     private final int WINDOWX1=600;
     private final int WINDOWY1=200;

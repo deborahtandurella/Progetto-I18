@@ -4,6 +4,9 @@ import model.Operator;
 
 import java.sql.Connection;
 
+/**
+ * This class contains all the available methods for the database of the operators
+ */
 public class DBOperatorDAO implements IDBOperatorProxy{
     private static DBOperatorDAO instance;
     private Connection connection;

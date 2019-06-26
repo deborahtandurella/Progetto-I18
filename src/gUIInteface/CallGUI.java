@@ -19,6 +19,9 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
 
+/**
+ * This class contains the GUI of the phone
+ */
 public class CallGUI extends JFrame implements ActionListener {
     private final int BUTTONWIDTH = 80;
     private final int BUTTONHEIGHT = 30;

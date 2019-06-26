@@ -7,6 +7,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * This class is used to insert a new operator in the database of the operators
+ */
 public class DBOperatorInserter {
     public DBOperatorInserter(){
 

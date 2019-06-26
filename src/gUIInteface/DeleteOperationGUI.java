@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+/**
+ * This class is used to receive the input for the operation to delete
+ */
 public class DeleteOperationGUI extends JFrame {
     private final String TITLE = "Delete operation window";
     private final String INPUT = "Insert the id of the operation to delete: ";

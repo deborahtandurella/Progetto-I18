@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+/**
+ * This abstract class is used for print the history on a file
+ */
 public abstract class DataWriter {
     private BufferedWriter writeLine;
     private String numCalling;
