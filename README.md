@@ -4,3 +4,5 @@ Realizzazione di un sistema per la gestione di un call center con risposta autom
 - interfaccia per la configurazione vista della sequenza delle domande e della tipologia di risposte;
 - interfaccia di gestione testuale;
 - interfaccia grafica per la simulazione del telefono dell’utente.
+
+[DescrizioneProgetto](https://github.com/IngSW-unipv/Progetto-I18/wiki)
