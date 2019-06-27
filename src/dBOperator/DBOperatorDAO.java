@@ -35,7 +35,7 @@ public class DBOperatorDAO implements IDBOperatorProxy{
     public Operator addOperatorToDatabase(String numCalling, Operator operator) {
         connection = connectionManager.connectToDB(connection);
         operatorInserter.insertOperator(connection, numCalling, operator);
-        Operator newOperator = operatorReader.retreiveOperator(connection, numCalling, operator.getNumber(), operator.getUsername());
+        Operator newOperator = operatorReader.retrieveOperator(connection, numCalling, operator.getNumber(), operator.getUsername());
         connection = connectionManager.disconnectFromDB(connection);
         return newOperator;
     }
@@ -62,7 +62,7 @@ public class DBOperatorDAO implements IDBOperatorProxy{
     public Operator updatePassword(String numCalling, Operator operator) {
         connection = connectionManager.connectToDB(connection);
         operatorUpdater.updatePassword(connection, numCalling, operator);
-        Operator updatedOperator = operatorReader.retreiveOperator(connection, numCalling, operator.getNumber(), operator.getUsername());
+        Operator updatedOperator = operatorReader.retrieveOperator(connection, numCalling, operator.getNumber(), operator.getUsername());
         connection = connectionManager.disconnectFromDB(connection);
         return updatedOperator;
     }
@@ -78,7 +78,7 @@ public class DBOperatorDAO implements IDBOperatorProxy{
     public Operator updateUsername(String numCalling, String number, String oldUser, String newUser) {
         connection = connectionManager.connectToDB(connection);
         operatorUpdater.updateUsername(connection, numCalling, number, oldUser, newUser);
-        Operator updatedOperator = operatorReader.retreiveOperator(connection, numCalling, number, newUser);
+        Operator updatedOperator = operatorReader.retrieveOperator(connection, numCalling, number, newUser);
         connection = connectionManager.disconnectFromDB(connection);
         return updatedOperator;
     }
@@ -93,7 +93,7 @@ public class DBOperatorDAO implements IDBOperatorProxy{
     @Override
     public Operator findOperator(String numCalling,String number,String username) {
         connection = connectionManager.connectToDB(connection);
-        Operator operator = operatorReader.retreiveOperator(connection, numCalling, number,username);
+        Operator operator = operatorReader.retrieveOperator(connection, numCalling, number,username);
         connection = connectionManager.disconnectFromDB(connection);
         return operator;
     }

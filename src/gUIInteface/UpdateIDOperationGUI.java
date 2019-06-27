@@ -112,7 +112,7 @@ public class UpdateIDOperationGUI extends JFrame {
     }
 
     /**
-     * This method is used to dispose the window
+     * This method is used to close the window
      */
     private void end(){
         this.dispose();

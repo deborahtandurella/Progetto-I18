@@ -60,7 +60,7 @@ public class MenuOperationGUI extends JFrame {
         this.operator = operator;
         this.numberCalling = numberCalling;
         this.callGUI=callGUI;
-        callGUI.getShowOptio().setVisible(false);
+        callGUI.getShowOption().setVisible(false);
         dataWriter = new DataWriterClient(numberCalling);
         updateStatus();
 
@@ -178,10 +178,10 @@ public class MenuOperationGUI extends JFrame {
                 updateStatus();
                 callGUI.setVisible(false);
                 callGUI.setVisible(true);
-                callGUI.getShowOptio().updateOptions();
+                callGUI.getShowOption().updateOptions();
                 callGUI.toFront();
                 callGUI.requestFocus();
-                callGUI.getShowOptio().setVisible(true);
+                callGUI.getShowOption().setVisible(true);
             }
 
             @Override
@@ -215,7 +215,7 @@ public class MenuOperationGUI extends JFrame {
     }
 
     /**
-     * This method dispose the window
+     * This method close the window
      */
     private void close() {
         this.dispose();

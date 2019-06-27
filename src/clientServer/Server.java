@@ -10,8 +10,8 @@ import java.util.ArrayList;
 
 public class Server implements IServerProxy {
     // variables
-    private DBOperatorDAO OperatorDAO;
-    private DBOperationDAO OperationDAO;
+    private DBOperatorDAO operatorDAO;
+    private DBOperationDAO operationDAO;
     // messages
     private final String ADDOPERATIONREQUEST = "received addOperation request";
     private final String ADDOPERATORREQUEST = "received addAndRetrieveOperator request";
@@ -27,8 +27,8 @@ public class Server implements IServerProxy {
     private final String LOGOUTREQUEST = "received request to logout";
 
     public Server() {
-        OperatorDAO = DBOperatorDAO.getInstance();
-        OperationDAO = DBOperationDAO.getInstance();
+        operatorDAO = DBOperatorDAO.getInstance();
+        operationDAO = DBOperationDAO.getInstance();
     }
 
     /**
@@ -37,7 +37,7 @@ public class Server implements IServerProxy {
      */
     public synchronized void addOperation(MessageServer messageServer) {
         logOperation(new DataWriterServer(messageServer.getNumCalling()), ADDOPERATIONREQUEST);
-        OperationDAO.addOperation(messageServer.getNumCalling(), messageServer.getOperation());
+        operationDAO.addOperation(messageServer.getNumCalling(), messageServer.getOperation());
     }
 
     /**
@@ -47,7 +47,7 @@ public class Server implements IServerProxy {
      */
     public ArrayList<Operation> retrieveJustTheRightOption(MessageServer messageServer) {
         logOperation(new DataWriterServer(messageServer.getNumCalling()), RETRIEVEOPERATIONREQUEST);
-        ArrayList<Operation> operations = OperationDAO.getAvailableOptionToShow(messageServer.getNumCalling(), messageServer.getNumber(), messageServer.getNumSequence());
+        ArrayList<Operation> operations = operationDAO.getAvailableOptionToShow(messageServer.getNumCalling(), messageServer.getNumber(), messageServer.getNumSequence());
         return operations;
     }
 
@@ -58,7 +58,7 @@ public class Server implements IServerProxy {
      */
     public synchronized Operator addAndRetrieveOperator(MessageServer messageServer) {
         logOperation(new DataWriterServer(messageServer.getNumCalling()), ADDOPERATORREQUEST);
-        Operator newOperator = OperatorDAO.addOperatorToDatabase(messageServer.getNumCalling(), messageServer.getOperator());
+        Operator newOperator = operatorDAO.addOperatorToDatabase(messageServer.getNumCalling(), messageServer.getOperator());
         return newOperator;
     }
 
@@ -68,7 +68,7 @@ public class Server implements IServerProxy {
      */
     public synchronized Operator changeUsername(MessageServer messageServer) {
         logOperation(new DataWriterServer(messageServer.getNumCalling()), CHANGEUSERNAMEREQUEST);
-        Operator updatedOperator = OperatorDAO.updateUsername(messageServer.getNumCalling(), messageServer.getId(), messageServer.getNumber(), messageServer.getText());
+        Operator updatedOperator = operatorDAO.updateUsername(messageServer.getNumCalling(), messageServer.getId(), messageServer.getNumber(), messageServer.getText());
         return updatedOperator;
     }
 
@@ -78,7 +78,7 @@ public class Server implements IServerProxy {
      */
     public synchronized Operator changePassword(MessageServer messageServer) {
         logOperation(new DataWriterServer(messageServer.getNumCalling()), CHANGEPASSWORDREQUEST);
-        Operator updatedOperator = OperatorDAO.updatePassword(messageServer.getNumCalling(), messageServer.getOperator());
+        Operator updatedOperator = operatorDAO.updatePassword(messageServer.getNumCalling(), messageServer.getOperator());
         return updatedOperator;
     }
 
@@ -88,7 +88,7 @@ public class Server implements IServerProxy {
      */
     public synchronized void removeOperation(MessageServer messageServer) {
         logOperation(new DataWriterServer(messageServer.getNumCalling()), REMOVEOPERATIONREQUEST);
-        OperationDAO.removeOperation(messageServer.getNumCalling(), messageServer.getNumber(), messageServer.getNumSequence());
+        operationDAO.removeOperation(messageServer.getNumCalling(), messageServer.getNumber(), messageServer.getNumSequence());
     }
 
     /**
@@ -97,7 +97,7 @@ public class Server implements IServerProxy {
      */
     public synchronized Operation changeID(MessageServer messageServer) {
         logOperation(new DataWriterServer(messageServer.getNumCalling()), CHANGEIDREQUEST);
-        Operation operationUpdated = OperationDAO.updateID(messageServer.getNumCalling(), messageServer.getId(), messageServer.getNumber(), messageServer.getText());
+        Operation operationUpdated = operationDAO.updateID(messageServer.getNumCalling(), messageServer.getId(), messageServer.getNumber(), messageServer.getText());
         return operationUpdated;
     }
 
@@ -107,7 +107,7 @@ public class Server implements IServerProxy {
      */
     public synchronized void changeText(MessageServer messageServer) {
         logOperation(new DataWriterServer(messageServer.getNumCalling()), CHANGETEXTREQUEST);
-        OperationDAO.updateText(messageServer.getNumCalling(), messageServer.getOperation());
+        operationDAO.updateText(messageServer.getNumCalling(), messageServer.getOperation());
     }
 
     /**
@@ -116,7 +116,7 @@ public class Server implements IServerProxy {
      */
     public synchronized void removeOperator(MessageServer messageServer) {
         logOperation(new DataWriterServer(messageServer.getNumCalling()), REMOVEOPERATORREQUEST);
-        OperatorDAO.removeOperator(messageServer.getNumCalling(), messageServer.getNumber(), messageServer.getNumSequence());
+        operatorDAO.removeOperator(messageServer.getNumCalling(), messageServer.getNumber(), messageServer.getNumSequence());
     }
 
     /**
@@ -126,7 +126,7 @@ public class Server implements IServerProxy {
      */
     public Operator findOperator(MessageServer messageServer) {
         logOperation(new DataWriterServer(messageServer.getNumCalling()), FINDOPERATORREQUEST);
-        Operator operator = OperatorDAO.findOperator(messageServer.getNumCalling(), messageServer.getNumber(),messageServer.getNumSequence());
+        Operator operator = operatorDAO.findOperator(messageServer.getNumCalling(), messageServer.getNumber(),messageServer.getNumSequence());
         return operator;
     }
 
@@ -140,7 +140,7 @@ public class Server implements IServerProxy {
         } else {
             logOperation(new DataWriterServer(messageServer.getNumCalling()), LOGOUTREQUEST);
         }
-        OperatorDAO.logged(messageServer.getNumCalling(), messageServer.getOperator());
+        operatorDAO.logged(messageServer.getNumCalling(), messageServer.getOperator());
     }
 
     private void logOperation(DataWriterServer dataWriter, String operation) {

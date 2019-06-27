@@ -121,7 +121,7 @@ public class UpdateTextOperationGUI extends JFrame {
     }
 
     /**
-     * This method dispose the window
+     * This method close the window
      */
     private void end(){
         this.dispose();

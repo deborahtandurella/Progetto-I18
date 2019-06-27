@@ -15,16 +15,16 @@ import java.util.Map;
 
 public class MultiThreadServer implements Runnable {
     // variables
-    private Socket csocket;
+    private Socket cSocket;
     private Server real;
     private Map<MessageType, Method> methodCorrispondence = new HashMap<>();
     // messages
     private static final String STARTED = "SERVER ONLINE";
     private static final String CONNECTED = "Server connected";
 
-    MultiThreadServer(Socket csocket) throws NoSuchMethodException, SocketException {
-        this.csocket = csocket;
-        csocket.setTcpNoDelay(true);
+    MultiThreadServer(Socket cSocket) throws NoSuchMethodException, SocketException {
+        this.cSocket = cSocket;
+        cSocket.setTcpNoDelay(true);
 
         real = new Server();
 
@@ -62,13 +62,13 @@ public class MultiThreadServer implements Runnable {
 
     public void run() {
         try {
-            ObjectInputStream inStream = new ObjectInputStream(csocket.getInputStream());
-            ObjectOutputStream outStream = new ObjectOutputStream(csocket.getOutputStream());
+            ObjectInputStream inStream = new ObjectInputStream(cSocket.getInputStream());
+            ObjectOutputStream outStream = new ObjectOutputStream(cSocket.getOutputStream());
             MessageServer message = (MessageServer) inStream.readObject();
             Object result = returnMessage(message.getMessageType(),message);
             outStream.writeObject(result);
             outStream.flush();
-            csocket.close();
+            cSocket.close();
         } catch (IOException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
         }

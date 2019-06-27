@@ -20,7 +20,7 @@ import static org.hamcrest.CoreMatchers.is;
 public class TesterDBOperator {
     private String numCalling="222333";
     @Before
-    public void DataLoad(){
+    public void dataLoad(){
         DBOperatorDAO instance=DBOperatorDAO.getInstance();
         instance.addOperatorToDatabase(numCalling,new Operator("5555","Nice Username","Nice Password"));
         instance.updateUsername(numCalling,"5555","Nice Username", "Nice Username 2");

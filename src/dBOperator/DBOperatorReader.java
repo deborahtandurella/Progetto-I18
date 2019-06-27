@@ -23,7 +23,7 @@ public class DBOperatorReader {
      * @return operator
      */
 
-    Operator retreiveOperator(Connection connection, String numCalling, String number, String username) {
+    Operator retrieveOperator(Connection connection, String numCalling, String number, String username) {
         Operator operator = null;
         try {
             System.err.println("[DBOperatorReader] - Retrieving just a operator to check ...");

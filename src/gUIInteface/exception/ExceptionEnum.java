@@ -12,6 +12,10 @@ public enum ExceptionEnum {
 
     private String labelToShow;
 
+    /**
+     * This method returns the String associated to the enumeration
+     * @return labelToShow
+     */
     public String getValue(){
         return labelToShow;
     }

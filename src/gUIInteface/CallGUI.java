@@ -325,10 +325,18 @@ public class CallGUI extends JFrame implements ActionListener {
         return  optionString;
     }
 
-    public ShowOption getShowOptio(){
+    /**
+     * This method return the object ShowOption associated to this class
+     * @return showOption
+     */
+    public ShowOption getShowOption(){
         return showOption;
     }
 
+    /**
+     * This method returns the instance of this class
+     * @return this
+     */
     public CallGUI getFrame(){
         return this;
     }
