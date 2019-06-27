@@ -74,7 +74,7 @@ public class MenuOperationGUI extends JFrame {
         delOpBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DeleteOperationGUI deleteOperation = new DeleteOperationGUI(numberCalling, operator.getNumber());
+                DeleteOperationGUI deleteOperation = new DeleteOperationGUI(numberCalling, getOperator().getNumber());
                 deleteOperation.setVisible(true);
                 dataWriter.updateHistory(DELETEOPERATIONBUTTONPRESSED);
             }
@@ -86,7 +86,7 @@ public class MenuOperationGUI extends JFrame {
         addOpBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                InsertOperationGUI insertOperation = new InsertOperationGUI(numberCalling,operator.getNumber());
+                InsertOperationGUI insertOperation = new InsertOperationGUI(numberCalling,getOperator().getNumber());
                 insertOperation.setVisible(true);
                 dataWriter.updateHistory(ADDOPERATIONBUTTONPRESSED);
             }
@@ -98,7 +98,7 @@ public class MenuOperationGUI extends JFrame {
         changeIdOpBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                UpdateIDOperationGUI updateOperationId = new UpdateIDOperationGUI(numberCalling, operator.getNumber());
+                UpdateIDOperationGUI updateOperationId = new UpdateIDOperationGUI(numberCalling, getOperator().getNumber());
                 updateOperationId.setVisible(true);
                 dataWriter.updateHistory(CHANGEIDOPERATIONBUTTONPRESSED);
             }
@@ -110,7 +110,7 @@ public class MenuOperationGUI extends JFrame {
         changeTextOpBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                UpdateTextOperationGUI updateOperationText = new UpdateTextOperationGUI(numberCalling, operator.getNumber());
+                UpdateTextOperationGUI updateOperationText = new UpdateTextOperationGUI(numberCalling, getOperator().getNumber());
                 updateOperationText.setVisible(true);
                 dataWriter.updateHistory(CHANGETEXTOPERATIONBUTTONPRESSED);
             }
@@ -123,7 +123,7 @@ public class MenuOperationGUI extends JFrame {
         delAccntBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DeleteOperatorGUI deleteOperator = new DeleteOperatorGUI(getFrame(),numberCalling, operator);
+                DeleteOperatorGUI deleteOperator = new DeleteOperatorGUI(getFrame(),numberCalling, getOperator());
                 deleteOperator.setVisible(true);
                 dataWriter.updateHistory(DELETEOPERATORBUTTONPRESSED);
             }
@@ -208,7 +208,7 @@ public class MenuOperationGUI extends JFrame {
         try {
             socket = new Socket(ServerInfo.IP, ServerInfo.PORT);
             ObjectOutputStream os = new ObjectOutputStream(socket.getOutputStream());
-            os.writeObject(new MessageServer(MessageType.LOGGED, numberCalling, operator));
+            os.writeObject(new MessageServer(MessageType.LOGGED, numberCalling, getOperator()));
         } catch (IOException ex) {
             ex.printStackTrace();
         }
