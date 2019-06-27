@@ -1,0 +1,76 @@
+package dBOperation;
+
+import dataHistory.DataWriterServer;
+import model.Operation;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+/**
+ * This class is used to retrieve the operations from the database
+ */
+public class DBOperationReader {
+    private String toCompare="";
+    public DBOperationReader(){
+
+    }
+
+    /**
+     * This method returns all the operation contained in the database for the number called
+     * @param connection
+     * @param number
+     * @return operations
+     */
+    ArrayList<Operation> retrieveAllTheOperations(Connection connection, String number) {
+        ArrayList<Operation> operations = new ArrayList<>(10);
+        try {
+            System.err.println("[DBOperationReader] - Retrieving all the operators to check ...");
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM operation where numbe=?;");
+            ps.setString(1, number);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                operations.add(new Operation(rs.getString("id"), rs.getString("numbe"), rs.getString("tex")));
+            }
+        } catch (SQLException e) {
+            System.err.println("[DBOperationReader] - Exception " + e + " encountered in method retrieveAllTheOperations.");
+        }
+        return operations;
+    }
+
+    /**
+     * This method is used to retrieve only the operations with an id equal to the numberSequence inserted + 1 character at a defined number
+     * @param connection
+     * @param numCalling
+     * @param numCall
+     * @param numSequence
+     * @return operations
+     */
+    ArrayList<Operation> retrieveTheAvailableOption(Connection connection, String numCalling, String numCall, String numSequence) {
+        DataWriterServer dataWriter = new DataWriterServer(numCalling);
+        if (numSequence.length() > toCompare.length()) {
+            dataWriter.updateHistory("The user pressed the button: " + numSequence.charAt(numSequence.length()-1));
+        }
+        else if (numSequence.length() < toCompare.length()) {
+            dataWriter.updateHistory("The user deleted his last choice");
+        }
+        ArrayList<Operation> operations = new ArrayList<>();
+        try {
+            System.err.println("[DBOperationReader] - Retrieving just the right ones ... ");
+            PreparedStatement ps=connection.prepareStatement("SELECT * From operation where numbe= ? and id like ? order by id;");
+            ps.setString(1, numCall);
+            ps.setString(2, numSequence + "_");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                operations.add(new Operation(rs.getString("id"), rs.getString("numbe"), rs.getString("tex")));
+            }
+        }
+        catch (SQLException e) {
+            System.err.println("[DBOperationReader] - Exception " + e + " encountered in method retrieveTheAvailableOption.");
+        }
+        toCompare = numSequence;
+        return operations;
+    }
+}
